@@ -1,3 +1,7 @@
+import { config } from "dotenv";
+
+config();
+
 if (!process.env.DISCORD_TOKEN) {
   throw new Error("DISCORD_TOKEN is not defined");
 }
