@@ -9,8 +9,10 @@ const readyEvent = {
       shard.user?.username + "#" + shard.user?.discriminator
     );
     shard.rest.fetchApplicationCommands(shard.userId).then((commands) => {
-      console.log("Global Commands: ", commands.length);
+      console.log("Global Slash Commands: ", commands.length);
     });
+    console.log("Prefix Commands: ", shard.commandClient?.commands.length);
+    console.log("Prefixes:", shard.commandClient?.prefixes);
   },
 };
 export default readyEvent;
